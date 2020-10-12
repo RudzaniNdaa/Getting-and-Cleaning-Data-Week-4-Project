@@ -49,3 +49,5 @@ Filtered_final <- Final_data %>%
 Average_final <- Filtered_final %>% 
   summarise_if(is.numeric, mean) 
 
+## writing the Average_final data set into a text file
+write.table(Average_final, "Average_final.txt", row.names = FALSE)
